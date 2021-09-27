@@ -1,0 +1,27 @@
+body { background: #ddd; color: #333; font-size: 16px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+h1, h2, h3 {font-weight: normal;}
+h1 {text-align: center; font-size: 3em;}
+h2 {font-size: 2em;}
+
+.arena {width: 40vw; margin: 2em auto;}
+
+.board { display: flex; flex-wrap: wrap; align-content: center; height: 40vw; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); border-radius: 6px; overflow: hidden;}
+button.tile { width: 33.3%; height: 33.3%; display: inline-block; margin: 0; background: #f7f7f7; border: 2px solid #aaa; font-size: 5em }
+
+button.tile:first-of-type, button.tile:nth-of-type(4), button.tile:nth-of-type(7) { border-left: none; }
+button.tile:first-of-type, button.tile:nth-of-type(2), button.tile:nth-of-type(3) { border-top: none; }
+button.tile:nth-of-type(3), button.tile:nth-of-type(6), button.tile:nth-of-type(9) { border-right: none; } 
+button.tile:nth-of-type(7), button.tile:nth-of-type(8), button.tile:nth-of-type(9) { border-bottom: none; }
+
+.hvX:hover, .tile.bgX { background: #cbebf7; }
+.hvO:hover, .tile.bgO { background: #cbf7e3; }
+.fgX { color: #0789b0; }
+.fgO { color: #07b061; }
+
+button.reset { margin: 2em auto; display: inline-block; padding: 1em; font-size: 1em;}
+
+@media screen and (max-width: 600px) { 
+  .arena {width: 75vw;}
+  .board {height: 75vw;}
+}  
