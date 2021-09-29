@@ -26,6 +26,7 @@ const Game = () => {
 
   useEffect(() => {
     gameOver();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ squares ]);
 
   const playerInput = (i) => {
